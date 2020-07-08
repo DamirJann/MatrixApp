@@ -1,0 +1,74 @@
+POST http://localhost:8081/calculate
+Content-Type: application/json
+
+{
+    "inputExpression": "A+B+23/0",
+    "variablePull": [
+      {
+        "name": "A",
+        "type": "Matrix",
+        "value": {
+          "mainMatrix": [
+            [
+              {
+                "numerator": 3,
+                "denominator": 1
+              },
+              {
+                "numerator": 6,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "numerator": 4,
+                "denominator": 1
+              },
+              {
+                "numerator": 8,
+                "denominator": 1
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "name": "B",
+        "type": "Matrix",
+        "value": {
+          "mainMatrix": [
+            [
+              {
+                "numerator": 3,
+                "denominator": 1
+              },
+              {
+                "numerator": 1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "numerator": 4,
+                "denominator": 1
+              },
+              {
+                "numerator": 9,
+                "denominator": 1
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "name": "C",
+        "type": "Rational",
+        "value": {
+          "numerator": 9,
+          "denominator": 1
+        }
+      }
+    ]
+}
+
+###
